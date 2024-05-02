@@ -104,7 +104,7 @@ def operon_maker_gff(gff,operon_file):
                 
 
 #running for e.coli ptt
-e_coli = pd.read_csv('E_coli_K12_MG1655.ptt',sep='\t', skiprows=2)
+e_coli = pd.read_csv('test_files/E_coli_K12_MG1655.ptt',sep='\t', skiprows=2)
 
 #Creates the output file and writes a header to it
 with open('operon_list_ecoli.txt','a') as write:
@@ -113,7 +113,7 @@ with open('operon_list_ecoli.txt','a') as write:
 operon_maker_ptt(e_coli,'operon_list_ecoli.txt')
 
 #running for b.subtilis ptt
-b_subtilis = pd.read_csv('B_subtilis_168.ptt',sep='\t', skiprows=2)
+b_subtilis = pd.read_csv('test_files/B_subtilis_168.ptt',sep='\t', skiprows=2)
 
 with open('operon_list_bsubtilis.txt','a') as write:
     write.write('B.subtilis Operon List:\n')
@@ -121,7 +121,7 @@ with open('operon_list_bsubtilis.txt','a') as write:
 operon_maker_ptt(b_subtilis,'operon_list_bsubtilis.txt')
 
 #running for halobacterium ptt
-halobacterium = pd.read_csv('Halobacterium_NRC1.ptt',sep='\t', skiprows=2)
+halobacterium = pd.read_csv('test_files/Halobacterium_NRC1.ptt',sep='\t', skiprows=2)
 
 with open('operon_list_halobacterium.txt','a') as write:
     write.write('Halobacterium Operon List:\n')
@@ -129,7 +129,7 @@ with open('operon_list_halobacterium.txt','a') as write:
 operon_maker_ptt(halobacterium,'operon_list_halobacterium.txt')
 
 #running for synechocystis ptt
-synechocystis = pd.read_csv('Synechocystis_PCC6803_uid159873.ptt',sep='\t', 
+synechocystis = pd.read_csv('test_files/Synechocystis_PCC6803_uid159873.ptt',sep='\t', 
                             skiprows=2)
 with open('operon_list_synechocystis.txt','a') as write:
     write.write('Synechocystis Operon List:\n')
@@ -137,7 +137,7 @@ with open('operon_list_synechocystis.txt','a') as write:
 operon_maker_ptt(synechocystis,'operon_list_synechocystis.txt')
 
 #running for hoatzin gff
-hoatzin = pd.read_csv('2088090036.gff',sep='\t', skiprows=1, header=None)
+hoatzin = pd.read_csv('test_files/2088090036.gff',sep='\t', skiprows=1, header=None)
 
 with open('operon_list_hoatzin.txt','a') as write:
     write.write('Crop microbiome from Hoatzin Operon List:\n')
